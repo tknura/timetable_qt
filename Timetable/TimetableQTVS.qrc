@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>ui/down.png</file>
+        <file>ui/down-disabled.png</file>
+        <file>ui/next.png</file>
+        <file>ui/prev.png</file>
+        <file>rsc/events.json</file>
+    </qresource>
+</RCC>

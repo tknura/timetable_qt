@@ -1,0 +1,13 @@
+debug/AddEventWindowController.o
+debug/Date.o
+debug/Event.o
+debug/EventList.o
+debug/JSONManager.o
+debug/MainManager.o
+debug/Reminder.o
+debug/TimeClass.o
+debug/TimetableQT.o
+debug/main.o
+debug/qrc_TimetableQTVS.o
+debug/moc_AddEventWindowController.o
+debug/moc_TimetableQT.o
