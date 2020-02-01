@@ -2,6 +2,7 @@
 Simple timetable app made with QT which I made as a University Project
 
 # Features
+- Interactive GUI
 - User made events connected to dates
 - Events lists 
 - Events stored in JSON file
