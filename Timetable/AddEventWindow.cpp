@@ -1,4 +1,4 @@
-#include "AddEventWindowController.h"
+#include "AddEventWindow.h"
 #include "ui_addeventwindow.h"
 
 AddEventWindow::AddEventWindow(QDate selectedDate, QWidget *parent) : QDialog(parent), ui(new Ui::AddEventWindow) {
@@ -26,17 +26,16 @@ void AddEventWindow::on_OkButton_clicked() {
     QDate endDate = ui->EndDateTimeEdit->date();
     QTime startTime = ui->StartDateTimeEdit->time();
     QTime endTime = ui->EndDateTimeEdit->time();
-    Event* pEvent = nullptr;
+
+    Event* pEvent = new Event(priority, startDate, endDate, startTime, endTime, name.toStdString(), accompanion.toStdString(), place.toStdString());
 
     if(ValidateNewEvent(name, startDate, endDate, startTime, endTime)){
 
         if(ui->ReminderButton->isChecked()){
             QDate remindDay = ui->ReminderDateTimeEdit->date();
             QTime remindTime = ui->ReminderDateTimeEdit->time();
-            pEvent = new Event(priority, startDate, endDate, startTime, endTime, name.toStdString(), accompanion.toStdString(), place.toStdString(), Reminder(remindDay, remindTime, true) );
-        }
-        else {
-            pEvent = new Event(priority, startDate, endDate, startTime, endTime, name.toStdString(), accompanion.toStdString(), place.toStdString());
+            Reminder reminder(remindDay, remindTime, true, pEvent);
+            pEvent->SetReminder(reminder);
         }
 
         MainManager::eventList.PushBack(*pEvent);

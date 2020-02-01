@@ -63,6 +63,20 @@ void Event::SetName(const std::string& newname) {
 	}
 }
 
+Reminder Event::GetReminder() const
+{
+	return reminder;
+}
+
+void Event::SetReminder(const Reminder &value)
+{
+	reminder = value;
+}
+
+std::string Event::RemindMessage() {
+	return ToString();
+}
+
 std::string Event::ToString() {
 	std::string result = name + "\n" + startTime.ToString() + " - " + endTime.ToString() + "\n";
 	if(place.length() != 0){
@@ -75,7 +89,7 @@ std::string Event::ToString() {
 }
 
 bool Event::IsValid() {
-
+	return (startDate.IsValid() && endDate.IsValid() && startTime.IsValid() && endTime.IsValid() && !name.empty());
 }
 
 void Event::Read(const QJsonObject &json) {

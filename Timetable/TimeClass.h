@@ -36,7 +36,7 @@ public:
     int GetSecond() const;
     void SetSecond(int value);
 
-    bool IsValid();
+    bool IsValid() override;
 
     std::string ToString() const;
     QTime ToQTime();

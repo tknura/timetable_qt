@@ -132,14 +132,16 @@ bool Date::IsValid() {
         }
     }
     switch(month){
-        case 1 :  return ((month <= 12 && month > 0) && (year > 1902) && (monthday <= 31 && monthday > 0) && (weekday <= 7 && weekday > 0 ));
-        case 2 :  return ((month <= 12 && month > 0) && (year > 1902) && (monthday <= 28 && monthday > 0) && (weekday <= 7 && weekday > 0 ));
-        case 3 :  return ((month <= 12 && month > 0) && (year > 1902) && (monthday <= 31 && monthday > 0) && (weekday <= 7 && weekday > 0 ));
-        case 5 :  return ((month <= 12 && month > 0) && (year > 1902) && (monthday <= 31 && monthday > 0) && (weekday <= 7 && weekday > 0 ));
-        case 7 :  return ((month <= 12 && month > 0) && (year > 1902) && (monthday <= 31 && monthday > 0) && (weekday <= 7 && weekday > 0 ));
-        case 8 :  return ((month <= 12 && month > 0) && (year > 1902) && (monthday <= 31 && monthday > 0) && (weekday <= 7 && weekday > 0 ));
-        case 10 :  return ((month <= 12 && month > 0) && (year > 1902) && (monthday <= 31 && monthday > 0) && (weekday <= 7 && weekday > 0 ));
-        case 12 :  return ((month <= 12 && month > 0) && (year > 1902) && (monthday <= 31 && monthday > 0) && (weekday <= 7 && weekday > 0 ));
+        case 1 :
+        case 3 :
+        case 5 :
+        case 7 :
+        case 8 :
+        case 10 :
+        case 12 :
+            return ((month <= 12 && month > 0) && (year > 1902) && (monthday <= 31 && monthday > 0) && (weekday <= 7 && weekday > 0 ));
+        case 2 :
+            return ((month <= 12 && month > 0) && (year > 1902) && (monthday <= 28 && monthday > 0) && (weekday <= 7 && weekday > 0 ));
         default: return ((month <= 12 && month > 0) && (year > 1902) && (monthday <= 30 && monthday > 0) && (weekday <= 7 && weekday > 0 ));
     }
 }

@@ -16,31 +16,37 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    AddEventWindowController.cpp \
+    AddEventWindow.cpp \
     Date.cpp \
     Event.cpp \
     EventList.cpp \
     JSONManager.cpp \
     MainManager.cpp \
     Reminder.cpp \
+    ReminderPopup.cpp \
+    ReminderPopupManager.cpp \
     TimeClass.cpp \
     TimetableQT.cpp \
     main.cpp
 
 HEADERS += \
-    AddEventWindowController.h \
+    AddEventWindow.h \
     Date.h \
     Event.h \
     EventList.h \
+    IRemindable.h \
     IValidator.h \
     JSONManager.h \
     MainManager.h \
     Reminder.h \
+    ReminderPopup.h \
+    ReminderPopupManager.h \
     TimeClass.h \
     TimetableQT.h
 
 FORMS += \
     AddEventWindow.ui \
+    ReminderPopup.ui \
     TimetableQT.ui
 
 # Default rules for deployment.

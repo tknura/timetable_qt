@@ -11,7 +11,7 @@
 
 enum class PriorityLevel { NONE, LOW, MEDIUM, HIGH };
 
-class Event : public IValidator
+class Event : public IValidator, public IRemindable
 {
 private:
     int priority;
@@ -42,14 +42,16 @@ public:
 	std::string GetPlace() const { return place; }
 	void SetPlace();
 
-	Reminder GetReminder() const { return reminder; }
-	void SetReminder();
+    Reminder GetReminder() const;
+    void SetReminder(const Reminder &value);
 
+    std::string RemindMessage() override;
     std::string ToString();
     bool IsValid();
 
     void Read(const QJsonObject &json);
     void Write(QJsonObject &json) const;
+
 };
 
 #endif

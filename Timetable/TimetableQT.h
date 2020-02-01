@@ -5,7 +5,7 @@
 #include <QList>
 #include "ui_TimetableQT.h"
 #include "MainManager.h"
-#include "AddEventWindowController.h"
+#include "AddEventWindow.h"
 
 class TimetableQT : public QWidget
 {

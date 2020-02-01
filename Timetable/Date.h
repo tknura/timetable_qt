@@ -42,7 +42,7 @@ public:
 	void SetMonth(const int& _month) { month = _month; }
 	void SetYear(const int& _year) { year = _year; }
 
-	bool IsValid();
+	bool IsValid() override;
 
     Date CurrentDate();
 
