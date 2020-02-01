@@ -1,4 +1,40 @@
 {
     "events": [
+        {
+            "accompanion": "sta",
+            "endDate": "2020-01-31",
+            "endTime": "14:57",
+            "name": "Test",
+            "place": "test",
+            "priority": 0,
+            "remindDate": "1990-01-01",
+            "remindTime": "00:00",
+            "startDate": "2020-01-31",
+            "startTime": "13:57"
+        },
+        {
+            "accompanion": "Mom",
+            "endDate": "2020-02-01",
+            "endTime": "14:10",
+            "name": "Family dinner",
+            "place": "KFC",
+            "priority": 0,
+            "remindDate": "1990-01-01",
+            "remindTime": "00:00",
+            "startDate": "2020-02-01",
+            "startTime": "13:10"
+        },
+        {
+            "accompanion": "",
+            "endDate": "2020-02-01",
+            "endTime": "19:11",
+            "name": "Dentist",
+            "place": "MedLab",
+            "priority": 0,
+            "remindDate": "1990-01-01",
+            "remindTime": "00:00",
+            "startDate": "2020-02-01",
+            "startTime": "17:11"
+        }
     ]
 }
