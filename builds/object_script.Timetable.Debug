@@ -10,6 +10,7 @@ debug/ReminderPopup.o
 debug/TimeClass.o
 debug/TimetableQT.o
 debug/main.o
+debug/qrc_resources.o
 debug/moc_AddEventWindow.o
 debug/moc_ReminderManager.o
 debug/moc_ReminderPopup.o

@@ -136,37 +136,49 @@ public:
         QFont font2;
         font2.setFamily(QString::fromUtf8("Comfortaa"));
         EventListWidget->setFont(font2);
-        EventListWidget->setStyleSheet(QString::fromUtf8(" QScrollBar:vertical {\n"
-"            border: 0px solid #999999;\n"
-"            background:white;\n"
-"            width:10px;    \n"
-"            margin: 0px 0px 0px 0px;\n"
-"}\n"
+        EventListWidget->setStyleSheet(QString::fromUtf8("QListWidget::QAbstractScrollArea::ScrollBar:vertical {\n"
+"     border: 2px solid grey;\n"
+"     background: #32CC99;\n"
+"     width: 15px;\n"
+"     margin: 22px 0 22px 0;\n"
+" }\n"
+"QListWidget::QAbstractScrollArea::QScrollBar::handle:vertical {\n"
+"     background: white;\n"
+"     min-height: 20px;\n"
+" }\n"
+"QListWidget::QAbstractScrollArea::QScrollBar::add-line:vertical {\n"
+"     border: 2px solid grey;\n"
+"     background: #32CC99;\n"
+"     height: 20px;\n"
+"     subcontrol-position: bottom;\n"
+"     subcontrol-origin: margin;\n"
+" }\n"
 "\n"
-" QScrollBar::handle:vertical {         \n"
-"            min-height: 0px;\n"
-"          	border: 0px solid red;\n"
-"			border-radius: 4px;\n"
-"			background-color: black;\n"
-"}\n"
+"QListWidget::QAbstractScrollArea::QScrollBar::sub-line:vertical {\n"
+"     border: 2px solid grey;\n"
+"     background: #32CC99;\n"
+"     height: 20px;\n"
+"     subcontrol-position: top;\n"
+"     subcontrol-origin: margin;\n"
+" }\n"
+"QListWidget::QAbstractScrollArea::QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {\n"
+"     border: 2px solid grey;\n"
+"     width: 3px;\n"
+"     height: 3px;\n"
+"     background: white;\n"
+" }\n"
 "\n"
-" QScrollBar::add-line:vertical {       \n"
-"            height: 0px;\n"
-"            subcontrol-position: bottom;\n"
-"            subcontrol-origin: margin;\n"
-"}\n"
-"\n"
-" QScrollBar::sub-line:vertical {\n"
-"            height: 0 px;\n"
-"            subcontrol-position: top;\n"
-"            subcontrol-origin: margin;\n"
-"}"));
+"QListWidget::QAbs"
+                        "tractScrollArea::QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {\n"
+"     background: none;\n"
+" }"));
         EventListWidget->setFrameShape(QFrame::NoFrame);
         EventListWidget->setFrameShadow(QFrame::Plain);
         EventListWidget->setSizeAdjustPolicy(QAbstractScrollArea::AdjustIgnored);
         EventListWidget->setAutoScroll(false);
         EventListWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
         EventListWidget->setProperty("showDropIndicator", QVariant(false));
+        EventListWidget->setVerticalScrollMode(QAbstractItemView::ScrollPerItem);
         EventListWidget->setProperty("isWrapping", QVariant(false));
         EventListWidget->setSpacing(14);
         EventListWidget->setSortingEnabled(false);
