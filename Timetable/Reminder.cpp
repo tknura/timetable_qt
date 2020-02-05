@@ -2,42 +2,55 @@
 
 Reminder::Reminder() {
     isActive = false;
-    remindDay = Date(1,1,1990);
-    time = Time(0,0,0);
+    remindDate = Date(1,1,1990);
+    remindTime = Time(0,0,0);
 }
 
-Time Reminder::GetTime() const {
-    return time;
+Reminder::Reminder(Date _remindday, Time _time, bool _isActive, IRemindable *_remindObject)  : remindDate(_remindday), remindTime(_time), remindObject(_remindObject), isActive(_isActive) {
 }
 
-void Reminder::SetTime(const Time& value) {
-    time = value;
+Time Reminder::GetRemindTime() const {
+    return remindTime;
 }
 
-Date Reminder::GetRemindDay() const {
-    return remindDay;
+void Reminder::SetRemindTime(const Time& value) {
+    remindTime = value;
 }
 
-void Reminder::SetRemindDay(const Date& value) {
-    remindDay = value;
+Date Reminder::GetRemindDate() const {
+    return remindDate;
 }
 
-bool Reminder::GetIsActive() const
-{
+void Reminder::SetRemindDate(const Date& value) {
+    remindDate = value;
+}
+
+bool Reminder::IsActive() const {
     return isActive;
 }
 
-void Reminder::SetIsActive(bool value)
-{
+void Reminder::SetActive(bool value) {
     isActive = value;
 }
 
 void Reminder::Read(const QJsonObject &json) {
-    remindDay = json["remindDate"].toString().toStdString();
-    time = json["remindTime"].toString().toStdString();
+    remindDate = json["remindDate"].toString().toStdString();
+    remindTime = json["remindTime"].toString().toStdString();
 }
 
 void Reminder::Write(QJsonObject &json) const {
-    json["remindDate"] = QString::fromStdString(remindDay.ToString());
-    json["remindTime"] = QString::fromStdString(time.ToString());
+    json["remindDate"] = QString::fromStdString(remindDate.ToString());
+    json["remindTime"] = QString::fromStdString(remindTime.ToString());
+}
+
+bool Reminder::IsValid() {
+    return remindDate.IsValid() && remindTime.IsValid();
+}
+
+IRemindable *Reminder::GetRemindObject() const {
+    return remindObject;
+}
+
+void Reminder::setRemindObject(IRemindable *value) {
+    remindObject = value;
 }

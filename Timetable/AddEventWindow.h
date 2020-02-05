@@ -5,6 +5,7 @@
 #include <QMessageBox>
 #include "EventList.h"
 #include "MainManager.h"
+#include "ReminderManager.h"
 
 namespace Ui {
 class AddEventWindow;
@@ -17,6 +18,7 @@ class AddEventWindow : public QDialog
 public:
     explicit AddEventWindow(QDate selectedDate, QWidget *parent = nullptr);
     ~AddEventWindow();
+    ReminderManager test;
 
 private slots:
     void on_OkButton_clicked();
@@ -28,6 +30,7 @@ private slots:
 private:
     Ui::AddEventWindow *ui;
     bool ValidateNewEvent(QString name, QDate startDate, QDate endDate, QTime startTime, QTime endTime);
+    bool ValidateNewReminder( QDate remindDay, QTime remindTime);
 };
 
 #endif // ADDEVENTWINDOW_H

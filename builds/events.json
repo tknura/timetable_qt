@@ -1,40 +1,52 @@
 {
     "events": [
         {
-            "accompanion": "sta",
-            "endDate": "2020-01-31",
-            "endTime": "14:57",
+            "accompanion": "1",
+            "endDate": "2020-02-05",
+            "endTime": "14:21",
             "name": "Test",
             "place": "test",
             "priority": 0,
-            "remindDate": "1990-01-01",
-            "remindTime": "00:00",
-            "startDate": "2020-01-31",
-            "startTime": "13:57"
-        },
-        {
-            "accompanion": "Mom",
-            "endDate": "2020-02-01",
-            "endTime": "14:10",
-            "name": "Family dinner",
-            "place": "KFC",
-            "priority": 0,
-            "remindDate": "1990-01-01",
-            "remindTime": "00:00",
-            "startDate": "2020-02-01",
-            "startTime": "13:10"
+            "remindDate": "2020-02-05",
+            "remindTime": "13:22",
+            "startDate": "2020-02-05",
+            "startTime": "13:21"
         },
         {
             "accompanion": "",
-            "endDate": "2020-02-01",
-            "endTime": "19:11",
-            "name": "Dentist",
-            "place": "MedLab",
+            "endDate": "2020-02-05",
+            "endTime": "14:27",
+            "name": "Test",
+            "place": "",
             "priority": 0,
-            "remindDate": "1990-01-01",
-            "remindTime": "00:00",
-            "startDate": "2020-02-01",
-            "startTime": "17:11"
+            "remindDate": "2020-02-05",
+            "remindTime": "13:28",
+            "startDate": "2020-02-05",
+            "startTime": "13:27"
+        },
+        {
+            "accompanion": "",
+            "endDate": "2020-02-05",
+            "endTime": "14:47",
+            "name": "XD",
+            "place": "",
+            "priority": 0,
+            "remindDate": "2020-02-05",
+            "remindTime": "13:48",
+            "startDate": "2020-02-05",
+            "startTime": "13:47"
+        },
+        {
+            "accompanion": "",
+            "endDate": "2020-02-05",
+            "endTime": "14:51",
+            "name": "LOL",
+            "place": "",
+            "priority": 0,
+            "remindDate": "2020-02-05",
+            "remindTime": "13:52",
+            "startDate": "2020-02-05",
+            "startTime": "13:51"
         }
     ]
 }

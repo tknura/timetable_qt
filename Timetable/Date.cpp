@@ -3,7 +3,7 @@
 Date::Date(int mday, int month, int year): monthday(mday), month(month), year(year) {
     weekday = CalculateWeekday();
     if(!IsValid()){
-        std::cerr << "INVALID DATE!!const\n";
+        std::cerr << "INVALID DATE!!\n";
     }
 }
 
@@ -13,7 +13,7 @@ Date::Date(const Date& date) {
     month = date.GetMonth();
     year = date.GetYear();
     if(!IsValid()){
-        std::cerr << "INVALID DATE!!copyconstr\n";
+        std::cerr << "INVALID DATE!!\n";
     }
 }
 
@@ -23,7 +23,7 @@ Date::Date(const QDate& date) {
     month = date.month();
     year = date.year();
     if(!IsValid()){
-        std::cerr << "INVALID DATE!!copyqconstr\n";
+        std::cerr << "INVALID DATE!!\n";
     }
 }
 
@@ -47,7 +47,7 @@ void Date::operator=(const Date& date) {
     month = date.GetMonth();
     year = date.GetYear();
     if(!IsValid()){
-        std::cerr << "INVALID DATE!!operator=\n";
+        std::cerr << "INVALID DATE!!\n";
     }
 }
 

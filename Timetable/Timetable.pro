@@ -23,8 +23,8 @@ SOURCES += \
     JSONManager.cpp \
     MainManager.cpp \
     Reminder.cpp \
+    ReminderManager.cpp \
     ReminderPopup.cpp \
-    ReminderPopupManager.cpp \
     TimeClass.cpp \
     TimetableQT.cpp \
     main.cpp
@@ -39,8 +39,8 @@ HEADERS += \
     JSONManager.h \
     MainManager.h \
     Reminder.h \
+    ReminderManager.h \
     ReminderPopup.h \
-    ReminderPopupManager.h \
     TimeClass.h \
     TimetableQT.h
 

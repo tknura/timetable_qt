@@ -10,7 +10,6 @@ void JSONManager::LoadData(const QJsonObject& json) {
         event.Read(eventObj);
         MainManager::eventList.PushBack(event);
     }
-
 }
 
 void JSONManager::WriteData(QJsonObject& json) {

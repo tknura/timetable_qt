@@ -3,6 +3,7 @@
 
 #include "EventList.h"
 #include "JSONManager.h"
+#include "ReminderManager.h"
 #include <vector>
 
 class MainManager

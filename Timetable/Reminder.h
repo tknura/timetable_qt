@@ -4,30 +4,38 @@
 #include "Date.h"
 #include "TimeClass.h"
 #include <string>
+#include <iremindable.h>
+#include <IValidator.h>
 #include <QJsonObject>
 
-class Reminder
+class Reminder : public IValidator
 {
 private:
-    Date remindDay;
-    Time time;
+    Date remindDate;
+    Time remindTime;
+    IRemindable* remindObject;
     bool isActive;
 
 public:
     Reminder();
-    Reminder(Date _remindday, Time _time, bool _isActive) : remindDay(_remindday), time(_time), isActive(_isActive) {}
+    Reminder(Date _remindday, Time _time, bool _isActive, IRemindable* _remindObject);
 
-    Time GetTime() const;
-    void SetTime(const Time& value);
+    Time GetRemindTime() const;
+    void SetRemindTime(const Time& value);
 
-    Date GetRemindDay() const;
-    void SetRemindDay(const Date& value);
+    Date GetRemindDate() const;
+    void SetRemindDate(const Date& value);
 
     void Read(const QJsonObject &json);
     void Write(QJsonObject &json) const;
 
-    bool GetIsActive() const;
-    void SetIsActive(bool value);
+    bool IsValid() override;
+
+    bool IsActive() const;
+    void SetActive(bool value);
+
+    IRemindable *GetRemindObject() const;
+    void setRemindObject(IRemindable *value);
 };
 
 #endif
