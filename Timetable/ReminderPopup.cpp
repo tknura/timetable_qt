@@ -6,8 +6,7 @@ ReminderPopup::ReminderPopup(QDialog *parent) : QDialog(parent), ui(new Ui::Remi
     ui->setupUi(this);
 }
 
-ReminderPopup::~ReminderPopup()
-{
+ReminderPopup::~ReminderPopup() {
     delete ui;
 }
 
@@ -15,12 +14,10 @@ void ReminderPopup::on_CloseButton_clicked() {
     hide();
 }
 
-Ui::ReminderPopup *ReminderPopup::GetUi() const
-{
+Ui::ReminderPopup *ReminderPopup::GetUi() const {
     return ui;
 }
 
-void ReminderPopup::SetUi(Ui::ReminderPopup *value)
-{
+void ReminderPopup::SetUi(Ui::ReminderPopup *value) {
     ui = value;
 }

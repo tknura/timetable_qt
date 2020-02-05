@@ -10,9 +10,15 @@ void TimetableQT::DisplayEventsInList(const QDate& date) {
     QStringList list;
     auto vec = MainManager::eventList.FindAll(date);
     for (unsigned int i = 0; i < vec.size() ; ++i) {
-        list.push_back(QString::fromStdString(vec[i].ToString()));
+        QLabel *label = new QLabel(this);
+        label->setText(styledEventString(vec[i]));
+        label->setFont(ui.DateLabel->font());
+        QListWidgetItem *item = new QListWidgetItem();
+
+        ui.EventListWidget->addItem(item);
+        item->setSizeHint(label->sizeHint());
+        ui.EventListWidget->setItemWidget(item, label);
     }
-    ui.EventListWidget->addItems(list);
 }
 
 void TimetableQT::HandleDateDisplay(const QDate &date) {
@@ -40,4 +46,45 @@ void TimetableQT::on_calendarWidget_clicked(const QDate &date) {
     HandleDateDisplay(date);
 }
 
+QString TimetableQT::styledEventString(const Event &event) {
+    QString text = "<p style= 'font-size: 12pt;";
+    switch(event.GetPriority()){
+        case 3 :{
+            text.append("color: #2f6e98'>");
+            break;
+        }
+        case 2 :{
+            text.append("color: #449eda'>");
+            break;
+        }
+        case 1 :{
+            text.append("color: #81c4ff'>");
+            break;
+        }
+        case 0 :{
+            text.append("color: #449eda'>");
+            break;
+        }
+    }
 
+    text.append("<b>" + QString::fromStdString(event.GetName()).toUpper() + "</b>");
+    text.append("<p></font></br>");
+    text.append("<p style= 'font-size: 8pt; color: black'>");
+    text.append(QString::fromStdString(event.GetStartTime().ToString()) + " - " + QString::fromStdString(event.GetEndTime().ToString()));
+    text.append("</p></br>");
+    if(!event.GetPlace().empty()){
+        text.append("<p style= 'font-size: 8pt; color: black'>");
+        text.append("at" + QString::fromStdString(event.GetPlace()));
+        text.append("</p></br>");
+    }
+    if(!event.GetAccompanion().empty()){
+        text.append("<p style= 'font-size: 8spt; color: black'>");
+        text.append("\\w" + QString::fromStdString(event.GetAccompanion()));
+        text.append("</p></br>");
+    }
+    return text;
+}
+
+//#2f6e98 //high
+//#449eda //medium
+//#81c4ff //low

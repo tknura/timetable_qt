@@ -4,7 +4,6 @@ EventList MainManager::eventList = EventList();
 
 MainManager::MainManager() {
     Start();
-    ReminderManager::GetInstance().ShowPopup();
     ReminderManager::GetInstance().ReminderHandler();
 }
 

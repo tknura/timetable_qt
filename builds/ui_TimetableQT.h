@@ -105,7 +105,17 @@ public:
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         splitter = new QSplitter(widget);
         splitter->setObjectName(QString::fromUtf8("splitter"));
+        splitter->setStyleSheet(QString::fromUtf8("QSplitter::handle {	\n"
+"    border-style: outset;\n"
+"    border-width: 1px;\n"
+"    border-radius: 3px;\n"
+"	border-color: rgb(255, 255, 255);\n"
+"	background-color:rgb(116, 202, 255);\n"
+"	margin: 1px 120px;			\n"
+"}"));
         splitter->setOrientation(Qt::Vertical);
+        splitter->setOpaqueResize(false);
+        splitter->setHandleWidth(4);
         DateLabel = new QLabel(splitter);
         DateLabel->setObjectName(QString::fromUtf8("DateLabel"));
         QFont font1;
@@ -155,9 +165,10 @@ public:
         EventListWidget->setFrameShadow(QFrame::Plain);
         EventListWidget->setSizeAdjustPolicy(QAbstractScrollArea::AdjustIgnored);
         EventListWidget->setAutoScroll(false);
-        EventListWidget->setEditTriggers(QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed|QAbstractItemView::SelectedClicked);
+        EventListWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
         EventListWidget->setProperty("showDropIndicator", QVariant(false));
         EventListWidget->setProperty("isWrapping", QVariant(false));
+        EventListWidget->setSpacing(14);
         EventListWidget->setSortingEnabled(false);
         splitter->addWidget(EventListWidget);
 

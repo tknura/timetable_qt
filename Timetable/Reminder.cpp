@@ -36,6 +36,7 @@ void Reminder::SetActive(bool value) {
 void Reminder::Read(const QJsonObject &json) {
     remindDate = json["remindDate"].toString().toStdString();
     remindTime = json["remindTime"].toString().toStdString();
+    isActive = true;
 }
 
 void Reminder::Write(QJsonObject &json) const {

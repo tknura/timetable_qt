@@ -3,6 +3,7 @@
 
 #include <QtWidgets/QWidget>
 #include <QList>
+#include <QLabel>
 #include "ui_TimetableQT.h"
 #include "MainManager.h"
 #include "AddEventWindow.h"
@@ -22,9 +23,9 @@ private slots:
     void on_HomeButton_clicked();
 
     void on_calendarWidget_clicked(const QDate &date);
-
 private:
     Ui::Timetable ui;
+    QString styledEventString(const Event& event);
 };
 
 #endif

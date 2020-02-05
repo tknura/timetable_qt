@@ -7,7 +7,7 @@
 #include "MainManager.h"
 #include <QTimer>
 #include <QObject>
-#include <QApplication>
+#include <QDesktopWidget>
 #include <QWidget>
 
 class ReminderManager : QObject

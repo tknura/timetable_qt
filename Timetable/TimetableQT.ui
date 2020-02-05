@@ -126,8 +126,24 @@ QMessageBox::ok {
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <widget class="QSplitter" name="splitter">
+      <property name="styleSheet">
+       <string notr="true">QSplitter::handle {	
+    border-style: outset;
+    border-width: 1px;
+    border-radius: 3px;
+	border-color: rgb(255, 255, 255);
+	background-color:rgb(116, 202, 255);
+	margin: 1px 120px;			
+}</string>
+      </property>
       <property name="orientation">
        <enum>Qt::Vertical</enum>
+      </property>
+      <property name="opaqueResize">
+       <bool>false</bool>
+      </property>
+      <property name="handleWidth">
+       <number>4</number>
       </property>
       <widget class="QLabel" name="DateLabel">
        <property name="font">
@@ -206,13 +222,16 @@ QMessageBox::ok {
         <bool>false</bool>
        </property>
        <property name="editTriggers">
-        <set>QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed|QAbstractItemView::SelectedClicked</set>
+        <set>QAbstractItemView::NoEditTriggers</set>
        </property>
        <property name="showDropIndicator" stdset="0">
         <bool>false</bool>
        </property>
        <property name="isWrapping" stdset="0">
         <bool>false</bool>
+       </property>
+       <property name="spacing">
+        <number>14</number>
        </property>
        <property name="sortingEnabled">
         <bool>false</bool>
