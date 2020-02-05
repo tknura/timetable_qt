@@ -10,7 +10,6 @@ release/ReminderPopup.o
 release/TimeClass.o
 release/TimetableQT.o
 release/main.o
-release/qrc_TimetableQTVS.o
 release/moc_AddEventWindow.o
 release/moc_ReminderManager.o
 release/moc_ReminderPopup.o

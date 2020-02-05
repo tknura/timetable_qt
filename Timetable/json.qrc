@@ -1,5 +1,0 @@
-<RCC>
-    <qresource prefix="/json">
-        <file>rsc/events.json</file>
-    </qresource>
-</RCC>

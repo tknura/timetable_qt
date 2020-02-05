@@ -1,7 +1,7 @@
-#include "TimetableQT.h"
-#include "MainManager.h"
 #include <QtWidgets/QApplication>
-#include "ReminderManager.h"
+#include "View/TimetableQT.h"
+#include "Management/MainManager.h"
+#include "Management/ReminderManager.h"
 
 int main(int argc, char *argv[])
 {

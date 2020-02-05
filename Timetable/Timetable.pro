@@ -16,38 +16,38 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    AddEventWindow.cpp \
-    Date.cpp \
-    Event.cpp \
-    EventList.cpp \
-    JSONManager.cpp \
-    MainManager.cpp \
-    Reminder.cpp \
-    ReminderManager.cpp \
-    ReminderPopup.cpp \
-    TimeClass.cpp \
-    TimetableQT.cpp \
+    View/AddEventWindow.cpp \
+    Model/Date.cpp \
+    Model/Event.cpp \
+    Model/EventList.cpp \
+    Management/JSONManager.cpp \
+    Management/MainManager.cpp \
+    Model/Reminder.cpp \
+    Management/ReminderManager.cpp \
+    View/ReminderPopup.cpp \
+    Model/TimeClass.cpp \
+    View/TimetableQT.cpp \
     main.cpp
 
 HEADERS += \
-    AddEventWindow.h \
-    Date.h \
-    Event.h \
-    EventList.h \
-    IRemindable.h \
-    IValidator.h \
-    JSONManager.h \
-    MainManager.h \
-    Reminder.h \
-    ReminderManager.h \
-    ReminderPopup.h \
-    TimeClass.h \
-    TimetableQT.h
+    View/AddEventWindow.h \
+    Model/Date.h \
+    Model/Event.h \
+    Model/EventList.h \
+    Model/IRemindable.h \
+    Model/IValidator.h \
+    Management/JSONManager.h \
+    Management/MainManager.h \
+    Model/Reminder.h \
+    Management/ReminderManager.h \
+    View/ReminderPopup.h \
+    Model/TimeClass.h \
+    View/TimetableQT.h
 
 FORMS += \
-    AddEventWindow.ui \
-    ReminderPopup.ui \
-    TimetableQT.ui
+    View/AddEventWindow.ui \
+    View/ReminderPopup.ui \
+    View/TimetableQT.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -57,5 +57,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 DISTFILES += \
     Timetable.pro.user
 
-RESOURCES += \
-    TimetableQTVS.qrc
+RESOURCES +=
