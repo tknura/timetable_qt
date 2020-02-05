@@ -18,7 +18,6 @@ class AddEventWindow : public QDialog
 public:
     explicit AddEventWindow(QDate selectedDate, QWidget *parent = nullptr);
     ~AddEventWindow();
-    ReminderManager test;
 
 private slots:
     void on_OkButton_clicked();
