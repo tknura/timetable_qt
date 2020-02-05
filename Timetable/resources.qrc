@@ -1,6 +1,8 @@
 <RCC>
     <qresource prefix="/">
-        <file>icon.png</file>
         <file>timetable.ico</file>
+        <file>Rsc/down.png</file>
+        <file>Rsc/down-disabled.png</file>
+        <file>Rsc/icon.png</file>
     </qresource>
 </RCC>

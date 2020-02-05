@@ -81,8 +81,7 @@ OBJECTS       = debug/AddEventWindow.o \
 		debug/moc_ReminderPopup.o \
 		debug/moc_TimetableQT.o
 
-DIST          = Timetable.pro.user \
-		icon.png ..\Timetable\View\AddEventWindow.h \
+DIST          = Timetable.pro.user ..\Timetable\View\AddEventWindow.h \
 		..\Timetable\Model\Date.h \
 		..\Timetable\Model\Event.h \
 		..\Timetable\Model\EventList.h \
@@ -152,8 +151,10 @@ compiler_rcc_clean:
 	-$(DEL_FILE) debug\qrc_resources.cpp
 debug/qrc_resources.cpp: ../Timetable/resources.qrc \
 		../../../Qt/5.12.5/mingw73_32/bin/rcc.exe \
-		../Timetable/icon.png \
-		../Timetable/timetable.ico
+		../Timetable/timetable.ico \
+		../Timetable/Rsc/down-disabled.png \
+		../Timetable/Rsc/icon.png \
+		../Timetable/Rsc/down.png
 	E:\Qt\5.12.5\mingw73_32\bin\rcc.exe -name resources ..\Timetable\resources.qrc -o debug\qrc_resources.cpp
 
 compiler_qmlcache_make_all:
@@ -965,7 +966,7 @@ debug/AddEventWindow.o: ../Timetable/View/AddEventWindow.cpp ../Timetable/View/A
 		../../../Qt/5.12.5/mingw73_32/include/QtCore/qbasictimer.h \
 		../../../Qt/5.12.5/mingw73_32/include/QtWidgets/QDesktopWidget \
 		../../../Qt/5.12.5/mingw73_32/include/QtWidgets/QWidget \
-		ui_addeventwindow.h \
+		ui_AddEventWindow.h \
 		../../../Qt/5.12.5/mingw73_32/include/QtCore/QLocale \
 		../../../Qt/5.12.5/mingw73_32/include/QtWidgets/QCheckBox \
 		../../../Qt/5.12.5/mingw73_32/include/QtWidgets/qcheckbox.h \

@@ -26,7 +26,6 @@ private slots:
     void on_CancelButton_clicked();
 
     void on_ReminderButton_stateChanged(int arg1);
-
 private:
     Ui::AddEventWindow *ui;
     bool ValidateNewEvent(QString name, QDate startDate, QDate endDate, QTime startTime, QTime endTime);

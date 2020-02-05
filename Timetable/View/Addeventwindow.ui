@@ -327,7 +327,7 @@ border: 0px;</string>
 }
 
 QDateTimeEdit::drop-down {
-    image: url(:ui/down.png);
+    image: url(:/Rsc/down.png);
 	color: rgb(233, 66, 146);
     width:30px;
     height:15px;
@@ -379,7 +379,7 @@ QDateTimeEdit::drop-down {
 }
 
 QDateTimeEdit::drop-down {
-    image: url(:ui/down.png);
+    image: url(:/Rsc/down.png);
 	color: rgb(233, 66, 146);
     width:30px;
     height:15px;
@@ -444,7 +444,7 @@ QDateTimeEdit::disabled{
 }
 
 QDateTimeEdit::drop-down {
-    image: url(:ui/down.png);
+    image: url(:/Rsc/down.png);
 	color: rgb(233, 66, 146);
     width:30px;
     height:15px;
@@ -456,7 +456,7 @@ QDateTimeEdit::drop-down {
 }
 
 QDateTimeEdit::drop-down::disabled {
-    image: url(:ui/down-disabled.png);
+    image: url(:/Rsc/down-disabled.png);
 	color: rgb(233, 66, 146);
     width:30px;
     height:15px;

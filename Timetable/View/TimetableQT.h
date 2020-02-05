@@ -19,10 +19,9 @@ public:
 
 private slots:
 	void on_AddEventButton_clicked();
-
     void on_HomeButton_clicked();
-
     void on_calendarWidget_clicked(const QDate &date);
+
 private:
     Ui::Timetable ui;
     QString styledEventString(const Event& event);

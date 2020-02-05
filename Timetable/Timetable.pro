@@ -57,8 +57,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
-    Timetable.pro.user \
-    icon.png
+    Timetable.pro.user
 
 RESOURCES += \
     resources.qrc

@@ -6,7 +6,7 @@
 int main(int argc, char *argv[])
 {
 	QApplication a(argc, argv);
-	a.setWindowIcon(QIcon(":/icon.png"));
+	a.setWindowIcon(QIcon(":/Rsc/icon.png"));
 	MainManager mm;
 	TimetableQT w;
 	w.show();

@@ -1,5 +1,5 @@
 #include "AddEventWindow.h"
-#include "ui_addeventwindow.h"
+#include "ui_AddEventWindow.h"
 
 AddEventWindow::AddEventWindow(QDate selectedDate, QWidget *parent) : QDialog(parent), ui(new Ui::AddEventWindow) {
     ui->setupUi(this);
@@ -13,6 +13,7 @@ AddEventWindow::AddEventWindow(QDate selectedDate, QWidget *parent) : QDialog(pa
     }
     ui->EndDateTimeEdit->setTime(QTime::currentTime().addSecs(3600));
     ui->ReminderDateTimeEdit->setDate(selectedDate);
+    ui->ReminderDateTimeEdit->setTime(QTime::currentTime().addSecs(3600));
 }
 
 AddEventWindow::~AddEventWindow() {
